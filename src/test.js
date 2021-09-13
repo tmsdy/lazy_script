@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const {getNowDate, getNowHour} = require('./lib/moment');
+const {sleep} = require('./lib/common');
 const {getCookieData, updateProcessEnv} = require('./lib/env');
 updateProcessEnv();
 const {
@@ -23,5 +24,5 @@ main().then(sendNotify.bind(0, {
 }));
 
 async function main() {
-  await doRun1(Joy);
+  await doRun(Joy);
 }
