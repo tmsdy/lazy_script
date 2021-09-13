@@ -13,6 +13,8 @@ const {
   sendNotify,
 } = require('./api');
 
+const Joy = require('./jd/joy');
+
 const nowDate = getNowDate();
 const nowHour = getNowHour();
 
@@ -21,4 +23,5 @@ main().then(sendNotify.bind(0, {
 }));
 
 async function main() {
+  await doRun1(Joy);
 }

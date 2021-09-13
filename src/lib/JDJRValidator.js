@@ -325,6 +325,7 @@ class JDJRValidator {
 
         res.on('data', (chunk) => rawData += chunk);
         res.on('end', () => {
+          console.log('jsonp end');
           try {
             const ctx = {
               [fnId]: (data) => ctx.data = data,
