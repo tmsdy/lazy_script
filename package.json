@@ -24,7 +24,7 @@
   "scripts": {
     "dev": "node src/app.js",
     "cron": "node src/cron.js",
-    "build:yaml": "node src/yaml/schedule.js",
+    "build:yaml": "node src/yaml/test.js",
     "build:updateShopToken": "node src/jd/sign/updateShopToken.js",
     "start:ShopGift": "node src/jd/wq/shopGift.js start",
     "start:SignShop": "npm run build:updateShopToken && node src/jd/sign/shop.js start && npm run build:updateShopToken",
