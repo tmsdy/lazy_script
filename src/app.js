@@ -72,7 +72,7 @@ const Joy20210805 = require('./jd/joy/20210805');
 const SuperBrandDay = require('./jd/superBrand/day');
 const SuperBrandProduct = require('./jd/superBrand/Product');
 const DDSJ = require('./jd/ddsj');
-
+const DDWJ = require('./jd/funny');
 /* 极速版 */
 const LiteSign = require('./jd/lite/Sign');
 const SpringReward = require('./jd/lite/SpringReward');
@@ -107,7 +107,7 @@ async function main() {
           IsvShopSign,
           SignShop,
           EarnJingDou,
-
+			DDWJ,
           // 统计
           StatisticsBean,
           StatisticsRedEnvelope,
@@ -139,7 +139,7 @@ async function main() {
           GoldCreator,
           Trump,
           // TODO 确认活动有效性
-          Car,
+       
         ]);
         await multipleRun([
           HealthSign,
@@ -154,21 +154,21 @@ async function main() {
     {
       valid: 5,
       run: async () => {
-        // await doRun(JxFarm);
+       await doRun(DDWJ);
       },
     },
     {
       valid: 6,
       run: async () => {
         await doCron(TurnTableFarm);
-        await serialRun(Joy);
+        await serialRun(DDWJ);
       },
     },
     {
       valid: 7,
       run: async () => {
         await serialRun([
-          Fruit, Pet,
+          DDWJ, Pet,
           EarnCoins,
           Family,
         ]);
@@ -177,7 +177,7 @@ async function main() {
     {
       valid: 9,
       run: async () => {
-        await serialRun(Joy);
+        await serialRun(DDWJ);
         await doRun(DreamFactory);
       },
     },
@@ -209,7 +209,7 @@ async function main() {
     {
       valid: 16,
       run: async () => {
-        await doRun(PlantBean);
+          await serialRun(DDWJ);
       },
     },
     {
